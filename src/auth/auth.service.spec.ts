@@ -45,9 +45,9 @@ describe('AuthService', () => {
 
       const savedUser = { ...user, Password: 'hashedPassword' } as UserEntity;
 
-      jest.spyOn(bcrypt, 'hash').mockResolvedValue('hashedPassword');
-      jest.spyOn(userRepository, 'create').mockReturnValue(savedUser);  // Mock create method
-      jest.spyOn(userRepository, 'save').mockResolvedValue(savedUser);
+      jest.spyOn(bcrypt, 'hash').mockResolvedValue('hashedPassword'as never);
+      jest.spyOn(userRepository, 'create').mockReturnValue(savedUser as never);  // Mock create method
+      jest.spyOn(userRepository, 'save').mockResolvedValue(savedUser as never);
 
       const result = await service.register(user.Name, user.Email, user.Password);
 
@@ -74,7 +74,7 @@ describe('AuthService', () => {
       };
 
       jest.spyOn(userRepository, 'findOne').mockResolvedValue(user as UserEntity);
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true);
+      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true as never);
 
       const result = await service.login(loginDto);
 

@@ -1,21 +1,25 @@
+
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "module": "commonjs", // CommonJS is standard for Node.js apps
+    "declaration": true, // Generates .d.ts files for type definitions
+    "removeComments": true, // Removes comments in the output files
+    "emitDecoratorMetadata": true, // Emits metadata for decorators
+    "experimentalDecorators": true, // Enables experimental support for decorators
+    "allowSyntheticDefaultImports": true, // Allows default imports from modules without default exports
+    "target": "ES2021", // Target ECMAScript version
+    "sourceMap": true, // Generates source maps
+    "outDir": "./dist", // Specifies the output directory
+    "baseUrl": "./", // Base directory for non-relative module names
+    "incremental": true, // Enables incremental compilation
+    "skipLibCheck": true, // Skips type checking of declaration files
+    "strictNullChecks": true, // Enables strict null checks
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied `any` type
+    "strictBindCallApply": true, // Check that the `this` parameter is of the right type
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+    "types": ["node", "jest"] // Include Node.js and Jest types
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
 }
