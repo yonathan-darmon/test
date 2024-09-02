@@ -1,73 +1,97 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Projet d'Apprentissage des Tests : NestJS & Angular
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Ce projet a pour objectif de fournir un environnement d'apprentissage des tests unitaires, fonctionnels, d'intégration et end-to-end (E2E) en utilisant NestJS pour le backend et Angular pour le frontend. Le module développé dans ce projet est un simple module de connexion (authentification).
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Table des Matières
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [Installation](#installation)
+- [Tests Disponibles](#tests-disponibles)
+- [Utilisation](#utilisation)
+- [Contributions](#contributions)
 
 ## Installation
 
-```bash
-$ npm install
-```
+### Prérequis
 
-## Running the app
+- [Node.js](https://nodejs.org/) version 14 ou supérieure
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+- [NestJS CLI](https://nestjs.com/) pour le backend
+- [Angular CLI](https://angular.io/cli) pour le frontend
 
-```bash
-# development
-$ npm run start
+### Backend (NestJS)
 
-# watch mode
-$ npm run start:dev
+1. Clonez ce dépôt :
+    ```bash
+    git clone https://github.com/ton-utilisateur/testproject.git
+    ```
+2. Accédez au répertoire backend :
+    ```bash
+    cd testproject
+    ```
+3. Installez les dépendances :
+    ```bash
+    npm install
+    ```
+4. Démarrez le serveur de développement :
+    ```bash
+    npm run start:dev
+    ```
 
-# production mode
-$ npm run start:prod
-```
+### Frontend (Angular)
 
-## Test
+1. Accédez au répertoire frontend :
+    ```bash
+    cd testfront
+    ```
+2. Installez les dépendances :
+    ```bash
+    npm install
+    ```
+3. Démarrez le serveur de développement :
+    ```bash
+    ng serve
+    ```
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+## Tests Disponibles
 
-# test coverage
-$ npm run test:cov
-```
+### Backend
 
-## Support
+- **Tests Unitaires** : Pour tester des fonctions et des composants spécifiques.
+- **Tests d'Intégration** : Pour tester plusieurs composants ensemble.
+- **Tests Fonctionnels** : Pour tester le module de connexion dans son ensemble.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Frontend
 
-## Stay in touch
+- **Tests Unitaires** : Pour tester des composants et des services Angular individuellement.
+- **Tests End-to-End (E2E)** : Pour tester l'application dans son ensemble du point de vue de l'utilisateur final.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Utilisation
 
-## License
+### Exécuter les Tests Backend
 
-Nest is [MIT licensed](LICENSE).
+- Tests unitaires :
+    ```bash
+    npm run test
+    ```
+### Exécuter les Tests Frontend
+
+- Tests unitaires :
+    ```bash
+    ng test
+    ```
+- Tests E2E :
+    ```bash
+    nmp run cy:open
+    ```
+
+## Contributions
+
+Les contributions sont les bienvenues ! Pour contribuer :
+
+1. Fork le projet
+2. Crée une branche pour ta fonctionnalité (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. Commit tes changements (`git commit -am 'Ajoute nouvelle fonctionnalité'`)
+4. Push sur la branche (`git push origin feature/nouvelle-fonctionnalite`)
+5. Ouvre une Pull Request
+
